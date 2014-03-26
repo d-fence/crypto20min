@@ -40,14 +40,37 @@ Nabuchodonosor en 600 avant JC écrivait sur le crâne rasé des esclaves.
 Il fallait alors attendre la repousse des cheveux pour cacher le message.
 Ceci s'apparente donc à de la stéganographie.
 
-Les guerriers spartiates ont utilisés la Scytale_. Il s'agît d'un ruban 
+Les guerriers spartiates ont utilisés la Scytale_. Il s'agît d'un ruban
 enroulé autour d'un cylindre sur lequel on inscrit le message.
 Une fois le ruban enlevé du cylindre, il est difficile de lire le message.
 Celui qui possède le cylindre ou un autre cylindre de même diamètre,
 peut déchiffrer le message. Le cylindre est donc la clef de chiffrement.
 
-Une methode de cryptanalyse de la Scytale consisterait à essayer des 
+Une methode de cryptanalyse de la Scytale consisterait à essayer des
 cylindres de différents diamètres afin décrypter le message.
 
 .. _Scytale : https://fr.wikipedia.org/wiki/Scytale
+
+Les hébreux ont utilisés le chiffre Atbash_. Il consiste à faire
+correspondre l'alphabet avec lui même en ordre inverse
+
+Voici un tableau pour l'alphabet latin:
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+
+|A|B|C|D|E|F|G|H|I|J|K|L|M|
++-+-+-+-+-+-+-+-+-+-+-+-+-+
+|Z|Y|X|W|V|U|T|S|R|Q|P|O|N|
++-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+.. _Atbash : https://fr.wikipedia.org/wiki/Atbash
+
+En 200 avant JC, les romains ont utilisé le chiffre de César.
+Il s'agissait d'une simple substitution qui consistait à décaler
+l'alphabet d'un certain nombre de places.
+La clef de chiffrement était donc ce nombre.
+
+Comme l'alphabet latin ne contient que 26 lettres, cette clef n'a
+donc que 25 positions possibles.
+
+
 
