@@ -62,6 +62,8 @@ Voici un tableau pour l'alphabet latin:
 |Z|Y|X|W|V|U|T|S|R|Q|P|O|N|
 +-+-+-+-+-+-+-+-+-+-+-+-+-+
 
+Pour déchiffrer, il suffit de recoder le message codé.
+
 .. _Atbash : https://fr.wikipedia.org/wiki/Atbash
 
 En 200 avant JC, les romains ont utilisé le chiffre de César.
@@ -72,5 +74,16 @@ La clef de chiffrement était donc ce nombre.
 Comme l'alphabet latin ne contient que 26 lettres, cette clef n'a
 donc que 25 positions possibles.
 
+Lorsque l'on utilise le code de César avec la clef 13, ce code peut aussi
+porter le nom plus moderne de ROT13.
+
+
+Le chiffre de Vigenère
+
+Le télégramme de la victoire
+
+Enigma
+
+Colossus
 
 
