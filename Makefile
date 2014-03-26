@@ -1,4 +1,9 @@
 ECRIT = travail-crypto
 
 ${ECRIT}.pdf: ${ECRIT}.rst
-	pandoc -o ${ECRIT}.pdf -f rst -S --toc -V geometry:a4paper -V geometry:"top=1.5cm, bottom=1.5cm, left=1cm, right=1cm" -V mainfont="Times New Roman" -V fontsize=12pt ${ECRIT}.rst
+	rst2latex --tab-width=4 ${ECRIT}.rst ${ECRIT}.tex
+	pdflatex ${ECRIT}.tex
+	rm ${ECRIT}.out ${ECRIT}.aux ${ECRIT}.log ${ECRIT}.tex
+
+pandoc: ${ECRIT}.rst
+	pandoc -o ${ECRIT}.pdf -f rst --reference-links -S --toc -V geometry:a4paper -V geometry:"top=1.5cm, bottom=1.5cm, left=1cm, right=1cm" -V mainfont="Times New Roman" -V fontsize=12pt ${ECRIT}.rst
