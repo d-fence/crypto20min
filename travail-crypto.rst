@@ -1,3 +1,5 @@
+.. target-notes::
+
 La cryptologie
 ==============
 
@@ -34,7 +36,11 @@ remonte à la nuit des temps.
 On a retrouvé des hiéroglyphes datés de 4000 ans, "transformés" pour les 
 rendre inintelligibles.
 
-Les guerriers spartiates ont utilisés la Scytale. Il s'agît d'un ruban 
+Nabuchodonosor en 600 avant JC écrivait sur le crâne rasé des esclaves.
+Il fallait alors attendre la repousse des cheveux pour cacher le message.
+Ceci s'apparente donc à de la stéganographie.
+
+Les guerriers spartiates ont utilisés la Scytale_. Il s'agît d'un ruban 
 enroulé autour d'un cylindre sur lequel on inscrit le message.
 Une fois le ruban enlevé du cylindre, il est difficile de lire le message.
 Celui qui possède le cylindre ou un autre cylindre de même diamètre,
@@ -43,4 +49,5 @@ peut déchiffrer le message. Le cylindre est donc la clef de chiffrement.
 Une methode de cryptanalyse de la Scytale consisterait à essayer des 
 cylindres de différents diamètres afin décrypter le message.
 
+.. _Scytale : https://fr.wikipedia.org/wiki/Scytale
 
