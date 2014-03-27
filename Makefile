@@ -19,6 +19,7 @@ clean:
 
 images:
 	wget https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Skytale.png/640px-Skytale.png
+	wget https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/FOSDEM_2008_Key_signing_party.jpg/319px-FOSDEM_2008_Key_signing_party.jpg
 
 view: ${ECRIT}.pdf
 	evince ${ECRIT}.pdf
