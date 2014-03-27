@@ -79,7 +79,6 @@ donc que 25 positions possibles.
 Lorsque l'on utilise le code de César avec la clef 13, ce code peut aussi
 porter le nom plus moderne de ROT13.
 
-
 Le chiffre de Vigenère
 
 Le télégramme de la victoire
@@ -90,5 +89,22 @@ Colossus
 
 Leçons de l'histoire
 --------------------
+
+En regardant la méthode Atbash, on constate que si l'opposant découvre la
+méthode d'encryption, il peut déchiffrer chaque message intercepté.  Il ne lui
+reste qu'a garder secret le fait qu'il peut lire les messages.
+
+Leçon:
+    La méthode utilisée devrait pouvoir tomber au mains de l'opposant sans
+    compromettre les messages.  En bref, la méthode devrait être publique.
+
+Observons la Scytale, on comprend facilement que si ce cylindre est transporté
+avec le message et qu'il est intercepté, l'opposant pourra déchiffrer chaque
+message si le diamètre du cylindre n'est pas changé à chaque message.
+
+Leçons:
+    * La clef de chiffrement ne devrait jamais être transmise avec le message.
+    * La clef de chiffrement devrait changer souvent (on verra plus tard
+        qu'elle devrait changer à chaque message).
 
 
