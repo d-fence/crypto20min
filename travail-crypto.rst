@@ -332,4 +332,47 @@ Parmis les systèmes existants, on peut citer:
     * cryptmount
     * LUKS Linux Unified Key Setup
     * cryptsetup
-    
+
+Fonctions de hachage cryptographiques.
+--------------------------------------
+
+Ces fonctions permettent de calculer une empreinte cryptographique.  Cette
+empreinte permet de certfiier qu'un message (qui peut être un fichier) n'a pas
+été modifié.  En effet, une suite de bytes ne devrait générer qu'une seule et
+unique empreinte.
+
+Néanmoins, le risque de collissions existe.  Une collision est le fait qu'une
+empreinte identique existe pour deux ou plusieurs messages différents.
+
+Voici quelques noms d'algorithmes de hachage:
+
+    * md5
+    * sha1
+    * sha256
+    * sha384
+    * sha512
+    * tiger
+    * whirlpool
+    * ...
+
+Exemple d'empreinte d'un message::
+
+    $ echo "Mon joli message" | md5sum
+    a020b4d442d2c2997711a050daf2d155  -
+
+La chaine de caractères "a020..." est une représentation hexadécimale de l'empreinte binaire md5.
+Si on change un seul caractère de ce message, l'empreinte n'est plus la même.
+
+Exemple::
+
+    $ echo "Mon joli message." | md5sum
+    bdbe3384e5cfdd67e53c931277e6b26e  -
+
+Utilisation des fonctions de hachage:
+-------------------------------------
+
+Echanger la connaissance d'un secret. Imaginons qu'un système veuille vérifier
+qu'un utilisateur connaît un mot de passe sans que le mot de passe ne soit
+stocké sur ce système.
+
+ 
