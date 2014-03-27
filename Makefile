@@ -17,7 +17,10 @@ odt: ${ECRIT}.rst
 clean:
 	rm ${ECRIT}.pdf
 
+images:
+	wget https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Skytale.png/640px-Skytale.png
+
 view: ${ECRIT}.pdf
 	evince ${ECRIT}.pdf
 
-all: clean ${ECRIT}.pdf view
+all: clean images ${ECRIT}.pdf view
