@@ -40,6 +40,8 @@ Nabuchodonosor en 600 avant JC écrivait sur le crâne rasé des esclaves.
 Il fallait alors attendre la repousse des cheveux pour cacher le message.
 Ceci s'apparente donc à de la stéganographie.
 
+.. figure:: 640px-Skytale.png
+
 Les guerriers spartiates ont utilisés la Scytale_. Il s'agît d'un ruban
 enroulé autour d'un cylindre sur lequel on inscrit le message.
 Une fois le ruban enlevé du cylindre, il est difficile de lire le message.
@@ -85,5 +87,8 @@ Le télégramme de la victoire
 Enigma
 
 Colossus
+
+Leçons de l'histoire
+--------------------
 
 
