@@ -216,8 +216,61 @@ Key Signing Parties:
 
 
 Pour chifrrer un message, il faut possèder la clef publique des destinataires.
+Une propriété intéressante est que l'on peut chiffrer un message avec plusieurs
+clés publiques. Chaque destinataire pourra alors déchiffrer le message.
+Si l'auteur du message ne le chiffre pas avec sa clef propre clé publique, il
+ne pourra pas déchiffrer son propre message. Le fait de garder une copie du
+message original en clair peut aussi constituer une faille dans le procédé.
 
-On peut également utiliser GPG pour signer des messages.
+Exemple de chiffrement avec clef publique::
+
+    gpg -a -e message.txt
+
+    l'argument "-a" permet "d'armer" le fichier chiffré (il est alors en ascii, transférable par mail)
+    l'argument "-e" demande à GPG de chiffer le message
+
+    GPG demande ensuite les destinataires dont on doit possèder la clef publique.
+
+On peut également utiliser GPG pour signer des messages ou des documents. La
+signature permet de vérifier que le fichier a bien été signé par le possesseur
+de la clé et que ce fcihier n'a pas été modifié depuis la signature.
+
+Exemple de signature et vérification d'un document::
+
+    gpg -a -b document.pdf
+
+    l'argument "-a" permet de génerer une signature "armée" (ascii)
+    l'argument "-b" permet de générer une signature détachée du document original
+
+    Un fichier "document.pdf.asc" est produit, il contient la signature.
+    Pour vérifier ce document:
+
+    gpg --verify document.pdf.asc document.pdf
+
+    Si un seul bit été changé dans le document, il sera invalidé.
+
+On voit donc que cette signature permet les fonctionalités suivantes:
+
+    * Vérifier l'intégrité du message.
+    * Vérifier l'origine présumée du message.
+    * Vérifier l'authenticité du message.
+
+Le système de signatures cryptographiques GPG est largement utilisé par les
+distributions linux afin de signer les logiciel binaires distribués. De cette
+manière, le risque de propagation de virus et de chevaux de troie et largement
+diminué.
+
+Malheureusement, force est de constater que ce système de chiffrement est
+surtout utilisé par des informatitciens. On peut facilement en imaginer les
+raisons:
+
+    * Les utilisateurs lambda ne resentent pas l'utilité de chiffrer leurs communications.
+    * La gestion du trousseau nécessite une certaine rigueur peu encouragée par
+        les multiples réinstallations nécessaires de systèmes comme MS Windows.
+    * Il faut que toutes les parties adhèrent à ce système, si un seul
+        participant à une communication demande de reçevoir le message en clair, le
+        système est mis à mal.
+
 
 Chiffrement de communications en temps réél
 -------------------------------------------
@@ -256,3 +309,27 @@ ssl
 open vpn
 --------
 
+Chiffrement de médias
+---------------------
+
+De le même manière que l'on peut chiffrer un fichier ou un message, il est
+possible de chiffer un media. La plupart du temps, l'utilisateur voudra
+chiffrer un disque dur.
+
+Il est difficile de chiffrer un disque dur sur lequel se trouve également le
+système d'exploitation, en effet, pour démarrer, le système doit charger ses
+fichiers depuis le disque, pour déchiffrer, un système minimal doit être
+démarré. C'est le serpent qui se mord la queue. 
+
+Pour palier à ce problème, on peut avoir un système minimal, à même de faire le
+déchiffrement, sur un support séparé, par exemple un clef USB. On par alors de
+"Full Disk Encryption".
+
+Parmis les systèmes existants, on peut citer:
+
+    * Truecrypt
+    * Bitlocker sous MS Windows
+    * cryptmount
+    * LUKS Linux Unified Key Setup
+    * cryptsetup
+    
