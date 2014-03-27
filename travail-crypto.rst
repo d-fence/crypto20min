@@ -91,7 +91,7 @@ Leçons de l'histoire
 --------------------
 
 En regardant la méthode Atbash, on constate que si l'opposant découvre la
-méthode d'encryption, il peut déchiffrer chaque message intercepté.  Il ne lui
+méthode de chiffrement, il peut déchiffrer chaque message intercepté.  Il ne lui
 reste qu'a garder secret le fait qu'il peut lire les messages.
 
 Leçon:
@@ -107,4 +107,152 @@ Leçons:
     * La clef de chiffrement devrait changer souvent (on verra plus tard
         qu'elle devrait changer à chaque message).
 
+One Time Pad
+------------
+
+Bien qu'en matière de cryptologie il faille sa garder des certitudes, le "One
+Time Pad" est considéré comme indéchiffrable.
+Mais il faut pour cela qu'il soit bien employé avec les conditions suivantes
+strictement respectées:
+
+    * Le clef de chiffrement doit être aussi longue que le message.
+    * La clef ne peut être utilisée qu'une et une seule fois.
+
+Chiffrement informatique
+========================
+
+Types de chiffrement
+--------------------
+
+* Chiffrement symétrique:
+    Comme la montré l'histoire, le chiffrement, jusqu'aux années 1970 était un
+    chiffrement à clés symétriques. A savoir, l'émetteur et le récepteur du
+    message devaient tous deux posséder une clef identique afin d'en déchiffrer le
+    contenu.
+
+* Chiffrement asymétrique:
+    Vers 1976, Whitfield Diffie et Martin Hellman auraient été les premiers à
+    présenter le concept de chiffrement asymétrique.
+    Dans ce cas, le message est chiffré avec une clef particulière mais, il est
+    déchiffré avec une clef différente.
+
+Chiffrement asymétrique, concepts de clef publique et clef privée
+-----------------------------------------------------------------
+
+Il s'agît de chiffrer le message à l'aide d'une fonction qui difficilement
+réversible et ayant une porte dérobée unique basée sur une information.
+
+C'est l'information permettant de calculer la fonction dérobée qui constitue la
+clef secrète. Par contre l'information utilisée comme paramètre de la fonction
+de chiffrement constitue la clef publique.
+
+La notion de difficilement réversible est important, c'est cette difficulté à
+"renverser" l'algorithme qui permet de mesurer la valeur de la méthode utilisée.
+
+Utilisations
+============
+
+Chiffrement de messages
+-----------------------
+
+Les logiciels les plus connus pour chiffrer des messages entre plusieurs
+utilisateurs sont certainement PGP et GPG (Gnu Privarcy Guard). C'est ce
+dernier qui sera utilisé pour illustrer les exemples du présent travail.
+ 
+Principes
+---------
+
+Les utilisateurs qui veulent échanger des messages secrets doivent commencer
+par générer une paire de clef priveé/publique. Cette paire de clef sera
+généralement associée à une ou plusieurs adresses email.
+
+En pratique, ces clef sont enregistrées dans des fichiers. Il est évident que
+toute la sécurité repose sur l'entreposage de la clef privée.
+
+Exemple de génération de paire avec GPG::
+
+    gpg --gen-key
+
+Il faut faire un choix d'algorithme de chiffrement et de longueur de clef.
+
+Afin de protéger sa clef privée au maximum, il convient de la chiffrer et
+d'utiliser une "passphrase" comme clef de chiffrement symétrique.
+
+Il faudra ensuite protéger sa clef privée, même chiffrée contre la lecture.
+Au besoin, il est possible de stocker sa clef privée sur un périphérique externe
+qui ne sera connecté que le temps de son utilisation.
+
+Vient alors le moment d'échanger sa clef publique avec la ou les personnes avec
+qui l'on désire communiquer.
+
+Il faut ici faire une remarque très importante car ce point est très souvent
+négligé:
+Le système est entièrement basé sur la confiance, c'est pourquoi il ne faut
+accepter des clef publiques que lorsque l'on a pu vérifier son interlocuteur.
+
+En effet, une méthode d'attaque de ce procédé consiste à se faire passer pour
+une personne de confiance et ainsi recevoir des messages qui lui sont destinés.
+
+Exemple::
+
+    Eve envoie un mail à Bob en se faisant passer pour Alice. Elle donne sa
+    clef publique à Bob, associée à une adresse mail qu'elle contrôle.
+    Bob envoie alors des messages chiffrés pensant qu'ils arrivent chez Alice,
+    ils sont en réalité chiffrés pour Eve et envoyés à Eve.
+
+Les solutions à ce problème sont de plusieurs natures:
+    1. N'accepter des clefs publiques uniquement de visu
+    2. Établir un système de confiance en signant les clefs publiques des personnes
+        dont on a pu établir l'identité formellement.
+
+Key Signing Parties:
+    Lors de certains rassemblement, des personnes se rassemblent et vérifient
+    leurs clefs publiques les uns et les autres sur base de la présentation d'un
+    document d'identité et d'une empreinte cryptographique de la clef publique.
+    Les clefs sont signées par la suite sur base de l'empreinte.
+
+.. figure:: 319px-FOSDEM_2008_Key_signing_party.jpg
+    :alt: Author Stevenfruitsmaak
+
+
+Pour chifrrer un message, il faut possèder la clef publique des destinataires.
+
+On peut également utiliser GPG pour signer des messages.
+
+Chiffrement de communications en temps réél
+-------------------------------------------
+
+Principes
+---------
+
+Comme le chiffrement asymétrique est très lent, il est difficile de l'utiliser
+pour chiffrer des flux de données en temps réél.  Pour cette raison, la plupart
+du temps, le chiffrement asymétrique sera utilisé pour échanger une clef de
+chiffrement symétrique (souvent appelée clé de session) qui servira à chiffrer
+la communication uniquement pour le temps de l'échange.
+
+ssh
+---
+
+Ssh (Secure Shell) permet de remplacer aventageusement telnet dont les
+communications n'éateient pas chiffrées. Il permet, entre autres, de se
+connecter en mode terminal à un ordinateur distant.
+
+On peut l'utiliser avec un simple mot de passe, ce mot de passe est vérifié par
+la machine distante et lorsque la vérification est positive, une clé symétrique
+est générée pour chiffrer la communication.
+
+Il est préférable d'utiliser plutôt une paire de clef. La clé privée sera
+gardée précieusement sur la machine initiatrice et protégée par une
+"passphrase". Par contre, la clef publique sera placée sur les serveurs
+distants. De ce fait, seule la "passphrase" sera demandée à la machine
+initiatrice pour déchiffrer la clé privée. La machine distante se chargera
+alors de chiffrer la communictaion avec la clef publique pour échanger une clef
+de session.
+
+ssl
+---
+
+open vpn
+--------
 
