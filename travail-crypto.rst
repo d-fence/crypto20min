@@ -95,6 +95,12 @@ Celui-ci est une évolution du code de césar, plus complexe à déchiffrer car 
 
 Fonctionnement :
 
+Cryptanalyse:
+
+Afin d'essayer de déchiffrer un chiffre poly-alphabetique, il convient de chercher des mots clef répétitifs (des "cribs").
+Ces mots clef, si ils ont été chiffrés avec à différents endroits avec des mêmes morceaux de clef, vont permettre calculer la longueur de la clef.
+
+Une fois que la longueur de la clef a été trouvée, on regroupe les lettres ayant été chiffrées avec le même morceau de clef. On procède alors à une analyse de fréquence classique sur ces groupes de lettres.
 
 Le télégramme de la victoire
 
