@@ -95,6 +95,10 @@ Celui-ci est une évolution du code de césar, plus complexe à déchiffrer car 
 
 Fonctionnement :
 
+    * clef: IFOSUP
+    * Message clair: 
+
+
 Cryptanalyse:
 
 Afin d'essayer de déchiffrer un chiffre poly-alphabetique, il convient de chercher des mots clef répétitifs (des "cribs").
@@ -103,6 +107,15 @@ Ces mots clef, si ils ont été chiffrés avec à différents endroits avec des 
 Une fois que la longueur de la clef a été trouvée, on regroupe les lettres ayant été chiffrées avec le même morceau de clef. On procède alors à une analyse de fréquence classique sur ces groupes de lettres.
 
 Le télégramme de la victoire
+
+À la fin de la première guerre mondiale, les allemands chiffraient leurs message avec le chiffre "ADFGVX". Il s'agissait à la fois d'un chiffrement basé sur une substitution des lettres suivi d'un deuxième chiffrement constitué d'une transposition.
+
+Un radiogramme chiffré par cette méthode a été intercepté par les alliés et déchiffré par Georges Painvin.
+
+.. _Painvin : https://fr.wikipedia.org/wiki/Georges_Painvin
+
+Ce message ordonnait l'envoi massif de munition à un endroit de la ligne de front, ce qui permit au alliés de concentrer leurs troupes à cet endroit.
+Il est admit que ce déchiffrement à permis d'accélérer la fin des hostilité et peut-être même changer l'issue de la guerre !
 
 Enigma
 
@@ -435,3 +448,4 @@ qu'un utilisateur connaît un mot de passe sans que le mot de passe ne soit
 stocké sur ce système.
 
  
+
