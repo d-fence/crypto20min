@@ -97,6 +97,15 @@ Fonctionnement :
 
     * clef: IFOSUP
     * Message clair: "Attaque par le nord"
+    * Chiffré: On prend l'intersection de la ligne "clair" correspondant à la lettre et de la ligne correspondant à la clef:
+    
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+    | A | T | T | A | Q | U | E | P | A | R | L | E | N | O | R | D |
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+    | I | F | O | S | U | P | I | F | O | S | U | P | I | F | O | S |
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+    | I | Y | H | S | K | J | M | U | O | J | F | T | V | T | F | V |
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
     
 .. image: carre-vigenere.png
 
