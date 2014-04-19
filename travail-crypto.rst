@@ -79,7 +79,22 @@ donc que 25 positions possibles.
 Lorsque l'on utilise le code de César avec la clef 13, ce code peut aussi
 porter le nom plus moderne de ROT13.
 
+Le chiffrement par substitution simple peut être déjoué par l'analyse de fréquence.
+
+Le graphique suivant montre l'analyse de fréquences des lettres de l'alphabet latin/français dans deux romans:
+
+.. image:: analyse.png
+
+Ce graphique montre clairement que les même lettres sont utilisées en proportions quasi identiques. De ce fait, si on analyse les fréquences des lettres substituées, on peut reconstituer le mesage original. 
+
 Le chiffre de Vigenère
+
+Le cryptage par chiffrement de Viginère est un chiffrement dit poly-alphabetique contrairement au chiffrement de César.
+
+Celui-ci est une évolution du code de césar, plus complexe à déchiffrer car il résiste mieux à l'analyse des fréquences.
+
+Fonctionnement :
+
 
 Le télégramme de la victoire
 
@@ -151,6 +166,44 @@ La notion de difficilement réversible est important, c'est cette difficulté à
 
 Utilisations
 ============
+
+Chiffrement XOR
+---------------
+
+Le cryptage Xor est un systeme de cryptage dit basique et symétrique, il à été très utilisé dans les débuts de l'informatique et l'est encore aujourd'hui car il est facile à intégré dans les programmes.
+
+Ce système de chiffrement à été utilisé par les espions soviétiques et pour le téléphone rouge entre le kremlin et la maison blanche entre autres.
+
+Rappel table de vérité du Xor :
+
++------+------+-----------------+
+| A    | B    | **A** XOR **B** |
++======+======+=================+
+| Faux | Faux | Faux            |
++------+------+-----------------+
+| Faux | Vrai | Vrai            |
++------+------+-----------------+
+| Vrai | Faux | Vrai            |
++------+------+-----------------+
+| Vrai | Vrai | Faux            |
++------+------+-----------------+
+
+
++---------+----------+----------+----------+----------+----------+----------+----------+
+| Lettres | M        | E        | S        | S        | A        | G        | E        |
++---------+----------+----------+----------+----------+----------+----------+----------+
+| ASCII   | 77       | 69       | 83       | 83       | 65       | 71       | 69       |
++---------+----------+----------+----------+----------+----------+----------+----------+
+| binaire | 01001101 | 01000101 | 01010011 | 01010011 | 01000001 | 01000111 | 01000101 |
++---------+----------+----------+----------+----------+----------+----------+----------+
+
++---------------------+----------+----------+----------+----------+----------+----------+----------+
+| Message binaire     | 01001101 | 01000101 | 01010011 | 01010011 | 01000001 | 01000111 | 01000101 |
++---------------------+----------+----------+----------+----------+----------+----------+----------+
+| Pattern Clé binaire | *None*   | *None*   | *None*   | *None*   | *None*   | *None*   | *None*   |
++---------------------+----------+----------+----------+----------+----------+----------+----------+
+| Messagecrypté       | 00001110 | 00001001 | 00010110 | 00010000 | 00001101 | 00000010 | 00000110 |
++---------------------+----------+----------+----------+----------+----------+----------+----------+
 
 Chiffrement de messages
 -----------------------
