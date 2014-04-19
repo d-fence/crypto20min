@@ -21,11 +21,18 @@ images:
 	wget https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Skytale.png/640px-Skytale.png
 	wget https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/FOSDEM_2008_Key_signing_party.jpg/319px-FOSDEM_2008_Key_signing_party.jpg
 
-livres:
+livre-comedie-humaine.txt:
 	wget http://www.gutenberg.org/ebooks/41211.txt.utf-8 -O livre-comedie-humaine.txt
+
+livre-histoires-extraordinaires.txt:
 	wget http://www.gutenberg.org/files/20761/20761-0.txt -O livre-histoires-extraordinaires.txt
+
+livres: livre-comedie-humaine.txt livre-histoires-extraordinaires.txt
+
+analyse.png: livres
+	python freqhisto.py
 
 view: ${ECRIT}.pdf
 	evince ${ECRIT}.pdf
 
-all: clean images ${ECRIT}.pdf view
+all: clean images analyse.png ${ECRIT}.pdf view
