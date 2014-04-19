@@ -36,8 +36,8 @@ def analyse(fichier):
     alpha = collections.OrderedDict(sorted(pourcent.items()))
     return alpha
 
-comedie = analyse("comedie-humaine.txt")
-histoires = analyse("histoires-extraordinaires.txt")
+comedie = analyse("livre-comedie-humaine.txt")
+histoires = analyse("livre-histoires-extraordinaires.txt")
 nbl = np.arange(len(LETTRES))  
 largeur = 0.4
 
