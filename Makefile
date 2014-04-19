@@ -17,9 +17,16 @@ odt: ${ECRIT}.rst
 clean:
 	rm ${ECRIT}.pdf
 
-images:
+carre-vigenere.png: carre-vigenere.html
+	wkhtmltoimage --width 650 carre-vigenere.html carre-vigenere.png
+
+640px-Skytale.png :
 	wget https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Skytale.png/640px-Skytale.png
-	wget https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/FOSDEM_2008_Key_signing_party.jpg/319px-FOSDEM_2008_Key_signing_party.jpg
+
+319px-FOSDEM_2008_Key_signing_party.jpg:
+	wget https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/FOSDEM_2008_Key_signing_party.jpg/319px-FOSDEM_2008_Key_signing_party.jpg 
+
+images: carre-vigenere.png 640px-Skytale.png 319px-FOSDEM_2008_Key_signing_party.jpg
 
 livre-comedie-humaine.txt:
 	wget http://www.gutenberg.org/ebooks/41211.txt.utf-8 -O livre-comedie-humaine.txt

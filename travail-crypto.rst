@@ -96,8 +96,9 @@ Celui-ci est une évolution du code de césar, plus complexe à déchiffrer car 
 Fonctionnement :
 
     * clef: IFOSUP
-    * Message clair: 
-
+    * Message clair: "Attaque par le nord"
+    
+.. image: carre-vigenere.png
 
 Cryptanalyse:
 
