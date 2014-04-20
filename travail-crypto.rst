@@ -532,6 +532,10 @@ Le problème de cette méthode est qu'un attaquant peut tenter de trouver le sec
 
 Pour palier à cette attaque, le système peut ajouter ce que l'on appelle un "grain de sel". Le système ajoute une partie aléatoire au secret avant de le faire passer dans la fonction de hachage. Ce grain de sel est différent sur chaque système, ce qui empêche de préparer un dictionnaire d'empreintes puisque les empreintes seront différentes sur chaque système. Ce grain de sel peut-être connu.
 
+Failles célèbres dans les systèmes de chiffrement
+-------------------------------------------------
 
+
+ * 
 
 
