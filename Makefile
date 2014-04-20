@@ -20,17 +20,17 @@ clean:
 carre-vigenere.png: carre-vigenere.html
 	wkhtmltoimage --width 650 carre-vigenere.html carre-vigenere.png
 
-640px-Skytale.png :
+640px-Skytale.png:
 	wget https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Skytale.png/640px-Skytale.png
 
 319px-FOSDEM_2008_Key_signing_party.jpg:
 	wget https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/FOSDEM_2008_Key_signing_party.jpg/319px-FOSDEM_2008_Key_signing_party.jpg 
 
-509px-Enigma_machine4.jpg :
-	https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Enigma_machine4.jpg/509px-Enigma_machine4.jpg
+509px-Enigma_machine4.jpg:
+	wget https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Enigma_machine4.jpg/509px-Enigma_machine4.jpg
 
 633px-Enigma-action.svg.png:
-	https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Enigma-action.svg/633px-Enigma-action.svg.png
+	wget https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Enigma-action.svg/633px-Enigma-action.svg.png
 
 images: carre-vigenere.png 640px-Skytale.png 319px-FOSDEM_2008_Key_signing_party.jpg 509px-Enigma_machine4.jpg 633px-Enigma-action.svg.png
 
