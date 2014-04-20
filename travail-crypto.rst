@@ -231,24 +231,11 @@ Types de chiffrement
     Dans ce cas, le message est chiffré avec une clef particulière mais, il est
     déchiffré avec une clef différente.
 
-Chiffrement asymétrique, concepts de clef publique et clef privée
------------------------------------------------------------------
-
-Il s'agît de chiffrer le message à l'aide d'une fonction qui difficilement
-réversible et ayant une porte dérobée unique basée sur une information.
-
-C'est l'information permettant de calculer la fonction dérobée qui constitue la
-clef secrète. Par contre l'information utilisée comme paramètre de la fonction
-de chiffrement constitue la clef publique.
-
-La notion de difficilement réversible est important, c'est cette difficulté à
-"renverser" l'algorithme qui permet de mesurer la valeur de la méthode utilisée.
-
 Utilisations
 ============
 
-Chiffrement XOR
----------------
+Exemple d'utilisation de chiffrement symétrique: XOR
+----------------------------------------------------
 
 Le cryptage Xor est un systeme de cryptage dit basique et symétrique, il à été très utilisé dans les débuts de l'informatique et l'est encore aujourd'hui car il est facile à intégré dans les programmes.
 
@@ -280,10 +267,24 @@ Rappel table de vérité du Xor :
 +---------------------+----------+----------+----------+----------+----------+----------+----------+
 | Message binaire     | 01001101 | 01000101 | 01010011 | 01010011 | 01000001 | 01000111 | 01000101 |
 +---------------------+----------+----------+----------+----------+----------+----------+----------+
-| Pattern Clé binaire | *None*   | *None*   | *None*   | *None*   | *None*   | *None*   | *None*   |
+| Pattern Clé binaire | 01000011 | 01001100 | 01000101 | 01000011 | 01001100 | 01000101 | 01000011 |
 +---------------------+----------+----------+----------+----------+----------+----------+----------+
 | Messagecrypté       | 00001110 | 00001001 | 00010110 | 00010000 | 00001101 | 00000010 | 00000110 |
 +---------------------+----------+----------+----------+----------+----------+----------+----------+
+
+Chiffrement asymétrique, concepts de clef publique et clef privée
+-----------------------------------------------------------------
+
+Il s'agît de chiffrer le message à l'aide d'une fonction qui difficilement
+réversible et ayant une porte dérobée unique basée sur une information.
+
+C'est l'information permettant de calculer la fonction dérobée qui constitue la
+clef secrète. Par contre l'information utilisée comme paramètre de la fonction
+de chiffrement constitue la clef publique.
+
+La notion de difficilement réversible est important, c'est cette difficulté à
+"renverser" l'algorithme qui permet de mesurer la valeur de la méthode utilisée.
+
 
 Chiffrement de messages
 -----------------------
@@ -412,7 +413,7 @@ Principes
 ---------
 
 Comme le chiffrement asymétrique est très lent, il est difficile de l'utiliser
-pour chiffrer des flux de données en temps réél.  Pour cette raison, la plupart
+pour chiffrer des flux de données en temps réel.  Pour cette raison, la plupart
 du temps, le chiffrement asymétrique sera utilisé pour échanger une clef de
 chiffrement symétrique (souvent appelée clé de session) qui servira à chiffrer
 la communication uniquement pour le temps de l'échange.
@@ -420,8 +421,8 @@ la communication uniquement pour le temps de l'échange.
 ssh
 ---
 
-Ssh (Secure Shell) permet de remplacer aventageusement telnet dont les
-communications n'éateient pas chiffrées. Il permet, entre autres, de se
+Ssh (Secure Shell) permet de remplacer avantageusement telnet dont les
+communications n'étaient pas chiffrées. Il permet, entre autres, de se
 connecter en mode terminal à un ordinateur distant.
 
 On peut l'utiliser avec un simple mot de passe, ce mot de passe est vérifié par
@@ -433,14 +434,29 @@ gardée précieusement sur la machine initiatrice et protégée par une
 "passphrase". Par contre, la clef publique sera placée sur les serveurs
 distants. De ce fait, seule la "passphrase" sera demandée à la machine
 initiatrice pour déchiffrer la clé privée. La machine distante se chargera
-alors de chiffrer la communictaion avec la clef publique pour échanger une clef
+alors de chiffrer la communication avec la clef publique pour échanger une clef
 de session.
 
-ssl
----
+ssl et tls
+----------
+
+SSL pour Secure Socket Layer. TLS pour Tansport Layer Security.
+TLS est le successeur de SSL.
+
+Il s'agît d'un protocole destiné à chiffrer et authentifier des communication en temps réel.
+
+Fonctionnement:
+
+Le site contacté est authentifié par un certificat. Ce certificat est signé cryptographiquement par une autorité de certification dans laquelle l'utilisateur client doit avoir confiance.
+Lorsque le site est authentifié, une clef symétrique est négociée. Cette clef sert au chiffrement en temps réel des données.
 
 open vpn
 --------
+
+Il s'agît un outil qui permet de créer un "tunnel" chiffré par lequel on fait passer toutes le communications.
+Ça permet de se connecter à un réseau distant, de confiance, en passant par un réseau qui n'est pas de confiance tel que l'Internet.
+
+En utilisant SSL, le client et le site distants s'authentifient, et une clef symétrique est négociée pour chiffrer la communication en temps réél.
 
 Chiffrement de médias
 ---------------------
@@ -470,7 +486,7 @@ Fonctions de hachage cryptographiques.
 --------------------------------------
 
 Ces fonctions permettent de calculer une empreinte cryptographique.  Cette
-empreinte permet de certfiier qu'un message (qui peut être un fichier) n'a pas
+empreinte permet de certfier qu'un message (qui peut être un fichier) n'a pas
 été modifié.  En effet, une suite de bytes ne devrait générer qu'une seule et
 unique empreinte.
 
@@ -508,5 +524,14 @@ Echanger la connaissance d'un secret. Imaginons qu'un système veuille vérifier
 qu'un utilisateur connaît un mot de passe sans que le mot de passe ne soit
 stocké sur ce système.
 
- 
+Il suffit alors de stocker l'empreinte du message, difficilement réversible sur le système de fichiers.
+Lorsqu'il faut vérifier que l'utilisateur connait le secret, il suffit de repasser le secret fournis par l'utilisateur dans la fonction de hachage.
+Si l'empreinte produite est la même, alors le secret est connu de l'utilisateur.
+
+Le problème de cette méthode est qu'un attaquant peut tenter de trouver le secret en essayant une multitude de combinaison jusqu'au moment où il trouve la même empreinte. Il s'agît d'une attaque par force brute. Si il utilse une liste de mot préparée à l'avance, on appelle cette attaque une attaque par dictionnaire.
+
+Pour palier à cette attaque, le système peut ajouter ce que l'on appelle un "grain de sel". Le système ajoute une partie aléatoire au secret avant de le faire passer dans la fonction de hachage. Ce grain de sel est différent sur chaque système, ce qui empêche de préparer un dictionnaire d'empreintes puisque les empreintes seront différentes sur chaque système. Ce grain de sel peut-être connu.
+
+
+
 
