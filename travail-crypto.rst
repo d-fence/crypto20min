@@ -113,6 +113,7 @@ Cryptanalyse:
 
 Afin d'essayer de déchiffrer un chiffre poly-alphabetique, il convient de chercher des mots clef répétitifs (des "cribs").
 Ces mots clef, si ils ont été chiffrés avec à différents endroits avec des mêmes morceaux de clef, vont permettre calculer la longueur de la clef.
+La longueur de la clef est un multiple de la distance entre deux "cribs" identiques.
 
 Une fois que la longueur de la clef a été trouvée, on regroupe les lettres ayant été chiffrées avec le même morceau de clef. On procède alors à une analyse de fréquence classique sur ces groupes de lettres.
 
@@ -124,12 +125,57 @@ Un radiogramme chiffré par cette méthode a été intercepté par les alliés e
 
 .. _Painvin : https://fr.wikipedia.org/wiki/Georges_Painvin
 
-Ce message ordonnait l'envoi massif de munition à un endroit de la ligne de front, ce qui permit au alliés de concentrer leurs troupes à cet endroit.
+Ce message ordonnait l'envoi massif de munition à un endroit de la ligne de front, ce qui permit au alliés de concentrer leurs troupes à cet endroit
+
+::
+    "Munitionierung beschleunigen punkst soweit nicht eingesehen auch bei tag"
+
 Il est admit que ce déchiffrement à permis d'accélérer la fin des hostilité et peut-être même changer l'issue de la guerre !
 
 Enigma
 
-Colossus
+.. image: 509px-Enigma_machine4.jpg
+   :author: Antoine Taveneaux
+
+Enigma est une machine à chiffrer utilisée par les allemands durant  la deuxième guerre mondiale.
+L'opérateur de la machine devait régler des rotors qui servaient à la substitution des lettres.
+Des câbles permettaient de faire également une transposition des lettres.
+
+L'opérateur disposait d'un carnet avec les réglages de base pour chaque jour:
+
+    * position des rotors
+    * câblage de transposition
+
+Au début de chaque communication, l'opérateur envoyait un code de trois lettres. Cet envoi était doublé.
+Ce code de trois lettres indiquait une nouvelle position des rotors.
+
+.. image: 633px-Enigma-action.svg.png
+   :author: Messer Woland
+
+A chaque appui sur une touche, les rotors tournent d'un pas consécutivement.
+
+En 1938, juste avant l'invasion de la Pologne, les Polonais invitent les Français et Anglais à découvrir le chiffre allemand !
+
+Les Polonais ont :
+
+    * Reconstitué ENIGMA
+    * Compris son fonctionnement
+
+Les alliés, à partir de ces informations, ont construit une machine capable de "casser"  le code rapidement !! (Bombe)
+
+La Bombe
+
+Une organisation secrète est mise en place au manoir de "Bletchey Park".
+Plus de 8000 personnes y travaillent au déchiffrement durant la seconde guerre mondiale ! (Opération ULTRA).
+
+La bombe était une machine capable de trouver la clef de chiffrement par une attaque de "force brute" (qui consiste à essayer des clefs jusqu'au moment ou l'on trouve la bonne).
+
+Certains évènements on contribué au succès de la bombe en permettant de réduire le nombre d'essais nécessaires:
+
+    * Capture d'un U-boot avec mode d'emploi d'ENIGMA et les carnets de codes de plusieurs mois
+    * Analyse des messages de la météo allemande dont certains mots sont "devinables"
+    * technique de la recherche du mot probable (un cribs)
+    * Doublement de la nouvelle clef par les Allemands
 
 Leçons de l'histoire
 --------------------
@@ -147,9 +193,14 @@ avec le message et qu'il est intercepté, l'opposant pourra déchiffrer chaque
 message si le diamètre du cylindre n'est pas changé à chaque message.
 
 Leçons:
-    * La clef de chiffrement ne devrait jamais être transmise avec le message.
+    * La clef de chiffrement (symétrique) ne devrait jamais être transmise avec le message.
     * La clef de chiffrement devrait changer souvent (on verra plus tard
         qu'elle devrait changer à chaque message).
+
+Les leçons des deux guerres mondiales pourraient être les suivantes:
+    * Pour qu'un chiffre soit considéré comme sécurisé, il faut que sa procédure de mise en œuvre puisse tomber aux mains de l'ennemi sans fragiliser le chiffre lui même
+    * Les points faibles d'un chiffre se situent au niveau de l'utilisation du chiffre
+    * L'échange d'un secret obligatoire (la clef) et constitue un point failble
 
 One Time Pad
 ------------
