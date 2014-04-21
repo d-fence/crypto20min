@@ -16,6 +16,7 @@ odt: ${ECRIT}.rst
 
 clean:
 	rm ${ECRIT}.pdf
+	rm -rf presentation-crypto20
 
 carre-vigenere.png: carre-vigenere.html
 	wkhtmltoimage --width 650 carre-vigenere.html carre-vigenere.png
@@ -48,4 +49,9 @@ analyse.png: livres
 view: ${ECRIT}.pdf
 	evince ${ECRIT}.pdf
 
-all: clean images analyse.png ${ECRIT}.pdf view
+presentation-crypto20: 
+	hovercraft crypto20.rst presentation-crypto20
+
+presentation: presentation-crypto20
+
+all: clean images analyse.png ${ECRIT}.pdf presentation view

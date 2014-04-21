@@ -5,7 +5,11 @@
 :data-transition-duration: 2000
 :skip-help: true
 
-.. title:: Brève introduction à la cryptographie
+----
+
+Brève introduction à la cryptographie
+
+Auteurs: Saulo Pinto et Christophe Monniez
 
 ----
 
