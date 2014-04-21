@@ -84,6 +84,7 @@ Le chiffrement par substitution simple peut être déjoué par l'analyse de fré
 Le graphique suivant montre l'analyse de fréquences des lettres de l'alphabet latin/français dans deux romans:
 
 .. image:: analyse.png
+    :scale: 50
 
 Ce graphique montre clairement que les même lettres sont utilisées en proportions quasi identiques. De ce fait, si on analyse les fréquences des lettres substituées, on peut reconstituer le mesage original. 
 
@@ -107,7 +108,8 @@ Fonctionnement :
     | I | Y | H | S | K | J | M | U | O | J | F | T | V | T | F | V |
     +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
     
-.. image: carre-vigenere.png
+.. image:: carre-vigenere.png
+   :scale: 75
 
 Cryptanalyse:
 
@@ -535,7 +537,33 @@ Pour palier à cette attaque, le système peut ajouter ce que l'on appelle un "g
 Failles célèbres dans les systèmes de chiffrement
 -------------------------------------------------
 
+    * CVE-2008-0166: En 2008, on a découvert que le mainteneur du paquet openssl de la distribution Debian avait modifié, deux ans auparavant,
+      le code source afin de l'optimiser. Malheureusement, il a de ce fait introduit une faille en rendant predictible le générateur de nombre aléatoire.
+      De ce fait, les clef cryptographiques générées sur le système depuis deux ans avec openssl étaient prédictibles.
+      Par exemple, toutes les paires de clefs ssh générées depuis lors pouvaient être réduites à quelques milliers.
+    * CVE-2014-1266 - "Apple goto fail": Une erreur de programmation introduite 9 ans plus tôt a été découverte.
+      Elle permet à un site non légitime de faire accépter un certificat non valide::
+      
+        hashOut.data = hashes + SSL_MD5_DIGEST_LEN;
+        hashOut.length = SSL_SHA1_DIGEST_LEN;
+        if ((err = SSLFreeBuffer(&hashCtx)) != 0)
+            goto fail;
+        if ((err = ReadyHash(&SSLHashSHA1, &hashCtx)) != 0)
+            goto fail;
+        if ((err = SSLHashSHA1.update(&hashCtx, &clientRandom)) != 0)
+            goto fail;
+        if ((err = SSLHashSHA1.update(&hashCtx, &serverRandom)) != 0)
+            goto fail;
+        if ((err = SSLHashSHA1.update(&hashCtx, &signedParams)) != 0)
+            goto fail;
+            goto fail;
+        if ((err = SSLHashSHA1.final(&hashCtx, &hashOut)) != 0)
+            goto fail;
+        err = sslRawVerify(...);
 
- * 
-
+    * CVE-2014-0092 - "Gnu TLS goto fail": Une erreur de programmation a introduit un bug aux effets similaires.
+    * CVE-2014-0160 - "Heartbleed": Une erreur de programmation introduite dans openssl permet à un attaquant 
+      d'obtenir une partie de la mémoire utilisée par les processus.
+      L'attaque peut être menée contre un serveur et ainsi obtenir des informations importantes 
+      ou bien un serveur malicieux peut obtenir des informations d'un client.
 
