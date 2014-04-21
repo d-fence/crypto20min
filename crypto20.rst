@@ -4,6 +4,7 @@
 
 :data-transition-duration: 2000
 :skip-help: true
+:auto-console: true
 
 ----
 
