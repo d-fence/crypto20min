@@ -2,7 +2,7 @@
 :author: Saulo Pinto
 :author: Christophe Monniez
 
-:data-transition-duration: 2000
+:data-transition-duration: 1000
 :skip-help: true
 :auto-console: true
 
@@ -11,6 +11,20 @@
 Brève introduction à la cryptographie
 
 Auteurs: Saulo Pinto et Christophe Monniez
+
+----
+
+Plan
+====
+
+1.Définitions
+2.Historique
+3.Leçons de l'histoire
+4.Chiffrement informatique
+5.Chiffrement symétrique - XOR
+6.Concepts de chiffrement assymétrique
+7.Fonctions de hachage cryptographiques
+8.Failles célèbres dans les systèmes de chiffrement
 
 ----
 
@@ -32,7 +46,7 @@ Définitions
 Définitions
 ===========
 
-* Chiffrement: 
+* Chiffrement:
     procédé par lequel on rend un message inintelligible pour ceux qui n'ont
     pas le code nécessaire pour le déchiffrement
 * Décryptage:
@@ -62,11 +76,11 @@ Historique
 
 ----
 
-Historique
-==========
+Historique: Chiffre Atbash
+==========================
 
-* Chiffre Atbash utilisé par les hébreux
-    # Alphabet inverse:
+* Utilisé par les hébreux
+* Alphabet inverse:
 
 +-+-+-+-+-+-+-+-+-+-+-+-+-+
 |A|B|C|D|E|F|G|H|I|J|K|L|M|
@@ -79,12 +93,12 @@ Historique
 
 ----
 
-Historique
-==========
+Historique: Chiffre de César
+============================
 
-* Chiffre de César en 200 avant JC
-    * Simple substitution
-    * On décale l'alphabet d'un certain nombre de places
+* 200 avant JC
+* Simple substitution
+* On décale l'alphabet d'un certain nombre de places
 
 .. note::
     
@@ -99,19 +113,18 @@ Historique
 
 ----
 
-Historique
-==========
+Historique: Analyse de fréquences
+=================================
 
-* Cryptanalise d'une simple substitution par analyse de fréquences
+* Facilite le déchiffrement d'une simple substitution
 
 .. image:: analyse.png
 
 ----
 
-Historique
-==========
+Historique: Chiffre de Vigenère
+===============================
 
-* Le chiffre de Vigenère
 * Évolution du code de César
 
 .. image:: carre-vigenere.png 
@@ -124,32 +137,28 @@ Historique
 
 ----
 
-Historique
-==========
+Historique: Cryptanalyse de Vigenère
+====================================
 
-* Cryptanalyse du chiffre de Vigenère
-    * Chercher des motifs qui se répètent: cribs
-    * Permet de trouver la longueur de la clef
-    * Analyse des fréquences
+* Chercher des motifs qui se répètent: cribs
+* Permet de trouver la longueur de la clef
+* Analyse des fréquences
 
 ----
 
-Historique
-==========
+Historique: Radiogramme de la victoire
+======================================
 
-* Radiogramme de la victoire
 * "Munitionierung beschleunigen punkst soweit nicht eingesehen auch bei tag"
     * Déchiffré par Georges Painvin
     * Chiffre ADFGVX:
-        * substitution 
+        * substitution
         * suivi d'une transposition
 
 ----
 
-Historique
-==========
-
-* Enigma
+Historique: Enigma
+==================
 
 .. image: 509px-Enigma_machine4.jpg
 
@@ -163,15 +172,14 @@ Historique
 
 ----
 
-Historique
-==========
+Historique: Enigma
+==================
 
-* Enigma
-    * Capture d'un U-boot:
-        * Mode d'emploi
-        * Carnets de note
-    * Météo chifrrée = mots devinables = cribs
-    * Doublement de la clef
+* Capture d'un U-boot:
+    * Mode d'emploi
+    * Carnets de note
+* Météo chifrrée = mots devinables = cribs
+* Doublement de la clef
 
 ----
 
@@ -242,30 +250,24 @@ Concepts de chiffrement asymétrique
 * Chiffrement avec une fonction difficilement réversible
     * Le paramètre de cette fonction est la clef publique
 * Porte dérobée pour déchiffrer (clef secrète)
+* Pas utilisé pour chiffrer en temps réel car trop lent
 
 ----
 
-Chiffrement asymétrique
-=======================
+Chiffrement asymétrique: GPG/PGP
+================================
 
-* GPG / PGP : chiffrer des messages
-    * Générer une paire de clef
-    * Protéger la clef privée
-    * Réseau de confiance
-    * Empreinte de la clef publique
-    * Signer et authentifier
-    * Chiffrer pour plusieurs personnes
-    * Chiffrer pour soi-même 
+* chiffrer des messages
+* Générer une paire de clef
+* Protéger la clef privée
+* Réseau de confiance
+* Empreinte de la clef publique
+* Signer et authentifier
+* Chiffrer pour plusieurs personnes
+* Chiffrer pour soi-même 
 
 .. note::
     * Parler des paquets signés (Debian ...)
-
-----
-
-Chiffrement asymétrique
-=======================
-
-* Pas utilisé pour chiffrer en temps réel car trop lent
 
 ----
 
@@ -277,7 +279,7 @@ Exemples d'utilisation conjointement au chiffrement symétrique:
     * ssh
     * ssl et tls
     * open vpn
-   
+
 ----
 
 Fonctions de hachage cryptographiques
