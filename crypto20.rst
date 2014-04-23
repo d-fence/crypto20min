@@ -196,7 +196,7 @@ Historique: Enigma
 ==================
 
 .. image:: 509px-Enigma_machine4.jpg
-   :width: 400px
+   :height: 450px
 
 .. note::
     
@@ -247,7 +247,7 @@ Chiffrement informatique
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.4
 
 Exemple de chiffrement symétrique avec XOR
 ==========================================
@@ -259,7 +259,7 @@ Table de vérité XOR:
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.6
 
 Exemple de chiffrement symétrique avec XOR
 ==========================================
@@ -269,7 +269,7 @@ Exemple de chiffrement symétrique avec XOR
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1
 
 Concepts de chiffrement asymétrique
 ===================================
@@ -300,7 +300,7 @@ Chiffrement asymétrique: GPG/PGP
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.4
 
 Chiffrement asymétrique
 =======================
@@ -314,7 +314,7 @@ Exemples d'utilisation conjointement au chiffrement symétrique:
 ----
 
 :data-rotate: 120    
-:data-scale: 1.2
+:data-scale: 1
 
 Fonctions de hachage cryptographiques
 =====================================
@@ -343,7 +343,7 @@ Fonctions de hachage cryptographiques
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.4
 
 Fonctions de hachage cryptographiques
 =====================================
@@ -357,7 +357,8 @@ Exercice:
 
 ----
 
-:data-scale: 1.2
+:data-rotate: 150
+:data-scale: 1
 
 Failles célèbres dans les systèmes de chiffrement
 =================================================
@@ -388,6 +389,9 @@ Failles célèbres dans les systèmes de chiffrement
 * CVE-2014-0160 - "Heartbleed"
 
 ----
+
+:data-scale: 1.4
+:data-rotate: 180
 
 Outils utilisés pour la présentation
 ====================================
