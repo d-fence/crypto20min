@@ -1,0 +1,113 @@
+/*
+    base03    #002b36    0  43  54
+    base02    #073642    7  54  66
+    base01    #586e75   88 110 117
+    base00    #657b83  101 123 131
+    base0     #839496  131 148 150
+    base1     #93a1a1  147 161 161
+    base2     #eee8d5  238 232 213
+    base3     #fdf6e3  253 246 227
+    yellow    #b58900  181 137   0
+    orange    #cb4b16  203  75  22
+    red       #dc322f  220  50  47
+    magenta   #d33682  211  54 130
+    violet    #6c71c4  108 113 196
+    blue      #268bd2   38 139 210
+    cyan      #2aa198   42 161 152
+    green     #859900  133 153   0
+*/
+
+
+{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: DroidSans;
+    src: url('fonts/Droid_Sans/DroidSans-Bold.ttf');
+}
+
+@font-face{
+    font-family: UbuntuMono;
+    src: url('fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf');
+}
+
+@font-face{
+    font-family: LatoBlack;
+    src: url('fonts/Lato/Lato-Black.ttf');
+}
+
+body{        
+    font-family: DroidSans;    
+    min-height: 740px;   
+    color: #EEE;
+    
+    background: #073642;
+
+    background: -webkit-radial-gradient(center bottom, circle farthest-corner, #93a1a1, #073642, white);
+    background: -moz-radial-gradient(center bottom, circle farthest-corner, #93a1a1, #073642, white);
+    background: -o-radial-gradient(center bottom, circle farthest-corner, #93a1a1, #073642, white);
+    background: -ms-radial-gradient(center bottom, circle farthest-corner, #93a1a1, #073642, white);
+    background: radial-gradient(center bottom, circle farthest-corner, #93a1a1, #073642, white);
+    
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+pre {
+    font-family: UbuntuMono;
+    font-size: 18px;
+    line-height: 1.3em;
+    background: #002b36;
+    padding: 1em;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-family: DroidSans;
+    font-size: 40px;
+    margin-bottom: 1.5em;
+    color: #cb4b16;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+dt {
+    color: #859900;
+    font-style: italic;
+}
+
+dl {
+    color: #fdf6e3;
+}
+
+.step {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 120px 60px;
+    color: #EEEEEE;
+    display: block;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    font-family: LatoBlack;
+    font-size: 30px;
+    height: 700px;
+    line-height: 36px;
+    position: relative;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.9);
+    width: 900px;
+    background: rgba(10,238,232,0.1);
+}
+
+#step-1 > h1 {
+    color: #268bd2;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+}
