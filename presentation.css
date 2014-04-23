@@ -1,0 +1,68 @@
+/*
+    base03    #002b36
+    base02    #073642
+    base01    #586e75
+    base00    #657b83
+    base0     #839496
+    base1     #93a1a1
+    base2     #eee8d5
+    base3     #fdf6e3
+    yellow    #b58900
+    orange    #cb4b16
+    red       #dc322f
+    magenta   #d33682
+    violet    #6c71c4
+    blue      #268bd2
+    cyan      #2aa198
+    green     #859900
+
+*/
+
+
+{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: DroidSans;
+src: url('fonts/DroidSans-Bold.ttf');
+}
+
+body{        
+    font-family: DroidSans;    
+    min-height: 740px;   
+    color: #EEE;
+    
+    background: #073642;
+
+    background: -webkit-radial-gradient(center bottom, circle farthest-corner, #657b83, #073642, black);
+    background: -moz-radial-gradient(center bottom, circle farthest-corner, #657b83, #073642, black);
+    background: -o-radial-gradient(center bottom, circle farthest-corner, #657b83, #073642, black);
+    background: -ms-radial-gradient(center bottom, circle farthest-corner, #657b83, #073642, black);
+    background: radial-gradient(center bottom, circle farthest-corner, #657b83, #073642, black);
+
+    
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 1.5em;
+}
+    
+
+.slide {
+    border-radius: 10px 10px 10px 10px;
+    color: #EEEEEE;
+    display: block;
+    font-family: DroidSans;
+    font-size: 30px;
+    height: 700px;
+    letter-spacing: -1px;
+    line-height: 36px;
+    position: relative;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.9);
+    width: 900px;
+}
