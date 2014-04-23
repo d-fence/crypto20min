@@ -49,6 +49,9 @@ analyse.png: livres
 view: ${ECRIT}.pdf
 	evince ${ECRIT}.pdf
 
+fonts:
+	./getfonts.sh
+
 presentation-crypto20: 
 	hovercraft -c presentation.css crypto20.rst presentation-crypto20
 
