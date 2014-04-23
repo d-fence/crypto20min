@@ -17,14 +17,14 @@ Auteurs: Saulo Pinto et Christophe Monniez
 Plan
 ====
 
-1.Définitions
-2.Historique
-3.Leçons de l'histoire
-4.Chiffrement informatique
-5.Chiffrement symétrique - XOR
-6.Concepts de chiffrement assymétrique
-7.Fonctions de hachage cryptographiques
-8.Failles célèbres dans les systèmes de chiffrement
+1. Définitions
+2. Historique
+3. Leçons de l'histoire
+4. Chiffrement informatique
+5. Chiffrement symétrique - XOR
+6. Concepts de chiffrement assymétrique
+7. Fonctions de hachage cryptographiques
+8. Failles célèbres dans les systèmes de chiffrement
 
 ----
 
