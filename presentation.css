@@ -34,6 +34,11 @@
     src: url('fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf');
 }
 
+@font-face{
+    font-family: LatoBlack;
+    src: url('fonts/Lato/Lato-Black.ttf');
+}
+
 body{        
     font-family: DroidSans;    
     min-height: 740px;   
@@ -52,7 +57,7 @@ body{
 }
 
 pre {
-    font-familly: UbuntuMono;
+    font-family: UbuntuMono;
     font-size: 18px;
     line-height: 1.3em;
     background: #002b36;
@@ -62,6 +67,7 @@ pre {
 }
 
 h1 {
+    font-family: DroidSans;
     font-size: 40px;
     margin-bottom: 1.5em;
     color: #cb4b16;
@@ -83,10 +89,9 @@ img {
     color: #EEEEEE;
     display: block;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-    font-family: DroidSans;
+    font-family: LatoBlack;
     font-size: 30px;
     height: 700px;
-    letter-spacing: -1px;
     line-height: 36px;
     position: relative;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.9);
