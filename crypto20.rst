@@ -216,8 +216,13 @@ Historique: Enigma
 * Capture d'un U-boot:
     * Mode d'emploi
     * Carnets de note
-* Météo chifrrée = mots devinables = cribs
-* Doublement de la clef
+
+* Météo chifrrée:
+    * mots devinables
+    * cribs
+
+* Doublement de la clef:
+    * crib
 
 ----
 
@@ -360,10 +365,18 @@ Exercice:
 :data-rotate: 150
 :data-scale: 1
 
-Failles célèbres dans les systèmes de chiffrement
-=================================================
+Failles - Epic Fail
+===================
 
 * CVE-2008-0166: Générateur de nombres aléatoires
+
+----
+
+:data-scale: 1.1
+
+Failles - Epic Fail
+===================
+
 * CVE-2014-1266 - "Apple goto fail" 
 
 .. code:: c
@@ -385,13 +398,19 @@ Failles célèbres dans les systèmes de chiffrement
             goto fail;
         err = sslRawVerify(...);
 
+----
+
+:data-scale: 1.2
+
+Failles - Epic Fail
+===================
+
 * CVE-2014-0092 - "Gnu TLS goto fail"
 * CVE-2014-0160 - "Heartbleed"
 
 ----
 
-:data-scale: 1.4
-:data-rotate: 180
+:data-rotate-x: 90
 
 Outils utilisés pour la présentation
 ====================================
@@ -401,3 +420,8 @@ impress.js:
 
 hovercraft:
     https://github.com/regebro/hovercraft
+
+Merci
+=====
+
+
