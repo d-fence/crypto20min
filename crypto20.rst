@@ -374,9 +374,11 @@ Exercice:
 Failles célèbres dans les systèmes de chiffrement
 =================================================
 
-    * CVE-2008-0166: Générateur de nombres aléatoires
-    * CVE-2014-1266 - "Apple goto fail" .. code::
-      
+* CVE-2008-0166: Générateur de nombres aléatoires
+* CVE-2014-1266 - "Apple goto fail" 
+
+.. code:: c
+        
         hashOut.data = hashes + SSL_MD5_DIGEST_LEN;
         hashOut.length = SSL_SHA1_DIGEST_LEN;
         if ((err = SSLFreeBuffer(&hashCtx)) != 0)
@@ -394,5 +396,5 @@ Failles célèbres dans les systèmes de chiffrement
             goto fail;
         err = sslRawVerify(...);
 
-    * CVE-2014-0092 - "Gnu TLS goto fail"
-    * CVE-2014-0160 - "Heartbleed"
+* CVE-2014-0092 - "Gnu TLS goto fail"
+* CVE-2014-0160 - "Heartbleed"
