@@ -11,12 +11,16 @@
 Brève introduction à la cryptographie
 =====================================
 
-Auteurs: Saulo Pinto et Christophe Monniez
+Auteurs: 
+    Saulo Pinto et Christophe Monniez
+
+Sources:
+    https://github.com/d-fence/crypto20min
 
 ----
 
 :data-rotate: 30
-:data-scale: 1.2
+:data-scale: 1.3
 
 Plan
 ====
@@ -56,7 +60,7 @@ Stéganographie:
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.4
 
 Définitions
 ===========
@@ -79,7 +83,7 @@ Le chiffre :
 ----
 
 :data-rotate: 60
-:data-scale: 1.2
+:data-scale: 1
 
 Historique
 ==========
@@ -96,7 +100,7 @@ Historique
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.1
 
 Historique: Chiffre Atbash
 ==========================
@@ -133,7 +137,7 @@ Historique: Chiffre de César
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.3
 
 Historique: Analyse de fréquences
 =================================
@@ -144,7 +148,7 @@ Historique: Analyse de fréquences
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.4
 
 Historique: Chiffre de Vigenère
 ===============================
@@ -162,7 +166,7 @@ Historique: Chiffre de Vigenère
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.5
 
 Historique: Cryptanalyse de Vigenère
 ====================================
@@ -173,7 +177,7 @@ Historique: Cryptanalyse de Vigenère
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.6
 
 Historique: Radiogramme de la victoire
 ======================================
@@ -186,7 +190,7 @@ Historique: Radiogramme de la victoire
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.7
 
 Historique: Enigma
 ==================
@@ -204,7 +208,7 @@ Historique: Enigma
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1.8
 
 Historique: Enigma
 ==================
@@ -217,7 +221,7 @@ Historique: Enigma
 
 ----
 
-:data-scale: 1.2
+:data-scale: 1
 
 Leçons de l'histoire
 ====================
@@ -382,3 +386,14 @@ Failles célèbres dans les systèmes de chiffrement
 
 * CVE-2014-0092 - "Gnu TLS goto fail"
 * CVE-2014-0160 - "Heartbleed"
+
+----
+
+Outils utilisés pour la présentation
+====================================
+
+impress.js:
+    https://github.com/bartaz/impress.js
+
+hovercraft:
+    https://github.com/regebro/hovercraft
