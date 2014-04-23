@@ -50,7 +50,7 @@ view: ${ECRIT}.pdf
 	evince ${ECRIT}.pdf
 
 presentation-crypto20: 
-	hovercraft crypto20.rst presentation-crypto20
+	hovercraft -c presentation.css crypto20.rst presentation-crypto20
 
 presentation: presentation-crypto20
 
