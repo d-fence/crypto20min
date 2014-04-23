@@ -37,10 +37,17 @@ Plan
 Définitions
 ===========
 
-* Cryptologie : Science du secret
-* Cryptographie : L'art des écritures cachées
-* Cryptanalyse : L'art de rendre clair un texte chiffré
-* Stéganographie : L'art de la dissimulation
+Cryptologie:
+    Science du secret
+
+Cryptographie:
+    L'art des écritures cachées
+
+Cryptanalyse:
+    L'art de rendre clair un texte chiffré
+
+Stéganographie:
+    L'art de la dissimulation
 
 .. note::
     Il est important de donner ici encore quelques définitions afin d'essayer de 
@@ -54,12 +61,14 @@ Définitions
 Définitions
 ===========
 
-* Chiffrement:
+Chiffrement:
     procédé par lequel on rend un message inintelligible pour ceux qui n'ont
     pas le code nécessaire pour le déchiffrement
-* Décryptage:
+
+Décryptage:
     procédé de déchiffrement sans connaître la clef de chiffrement.
-* Le chiffre :
+
+Le chiffre :
     c'est la méthode de chiffrement ou l'organisme qui s'occupe de chiffrer
 
 .. note::
