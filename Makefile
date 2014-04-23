@@ -18,9 +18,10 @@ clean:
 	rm ${ECRIT}.pdf
 	rm -rf presentation-crypto20
 	rm atbash-table.html
+	rm table-verite-xor.html
 
-carre-vigenere.png: carre-vigenere.html
-	wkhtmltoimage --width 650 carre-vigenere.html carre-vigenere.png
+carre-vigenere.svg: carre-vigenere.html
+	wkhtmltoimage --width 650 carre-vigenere.html carre-vigenere.svg
 
 640px-Skytale.png:
 	wget https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Skytale.png/640px-Skytale.png
@@ -37,10 +38,22 @@ carre-vigenere.png: carre-vigenere.html
 atbash-table.html: atbash-table.rst
 	rst2html atbash-table.rst atbash-table.html
 
-atbash-table.png: atbash-table.html
-	wkhtmltoimage --width 640 atbash-table.html atbash-table.png
+atbash-table.svg: atbash-table.html
+	wkhtmltoimage --width 640 atbash-table.html atbash-table.svg
 
-images: carre-vigenere.png 640px-Skytale.png 319px-FOSDEM_2008_Key_signing_party.jpg 509px-Enigma_machine4.jpg 633px-Enigma-action.svg.png atbash-table.png
+table-verite-xor.html: table-verite-xor.rst
+	rst2html table-verite-xor.rst table-verite-xor.html
+
+table-verite-xor.svg: table-verite-xor.html
+	wkhtmltoimage --width 350 table-verite-xor.html table-verite-xor.svg
+
+message-xor.html: message-xor.rst
+	rst2html message-xor.rst message-xor.html
+
+message-xor.svg: message-xor.html
+	wkhtmltoimage --width 700 message-xor.html message-xor.svg
+
+images: carre-vigenere.svg 640px-Skytale.png 319px-FOSDEM_2008_Key_signing_party.jpg 509px-Enigma_machine4.jpg 633px-Enigma-action.svg.png atbash-table.svg table-verite-xor.svg message-xor.svg
 
 livre-comedie-humaine.txt:
 	wget http://www.gutenberg.org/ebooks/41211.txt.utf-8 -O livre-comedie-humaine.txt
