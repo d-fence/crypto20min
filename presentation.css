@@ -52,7 +52,13 @@ h1 {
     color: #cb4b16;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.9);
 }
-    
+
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 
 .step {
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -73,4 +79,7 @@ h1 {
     background: rgba(10,238,232,0.1);
 }
 
-
+#step-1 > h1 {
+    color: #268bd2;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+}

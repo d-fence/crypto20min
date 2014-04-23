@@ -9,10 +9,14 @@
 ----
 
 Brève introduction à la cryptographie
+=====================================
 
 Auteurs: Saulo Pinto et Christophe Monniez
 
 ----
+
+:data-rotate: 30
+:data-scale: 1.2
 
 Plan
 ====
@@ -28,6 +32,8 @@ Plan
 
 ----
 
+:data-scale: 1.2
+
 Définitions
 ===========
 
@@ -42,6 +48,8 @@ Définitions
     entendu proviennent directement de l'anglais, comme "encryption".
 
 ----
+
+:data-scale: 1.2
 
 Définitions
 ===========
@@ -61,6 +69,9 @@ Définitions
 
 ----
 
+:data-rotate: 60
+:data-scale: 1.2
+
 Historique
 ==========
 
@@ -75,6 +86,8 @@ Historique
     cylindres de différents diamètres afin décrypter le message.
 
 ----
+
+:data-scale: 1.2
 
 Historique: Chiffre Atbash
 ==========================
@@ -92,6 +105,8 @@ Historique: Chiffre Atbash
     Pour déchiffrer on recode le message chiffré
 
 ----
+
+:data-scale: 1.2
 
 Historique: Chiffre de César
 ============================
@@ -113,6 +128,8 @@ Historique: Chiffre de César
 
 ----
 
+:data-scale: 1.2
+
 Historique: Analyse de fréquences
 =================================
 
@@ -122,12 +139,15 @@ Historique: Analyse de fréquences
 
 ----
 
+:data-scale: 1.2
+
 Historique: Chiffre de Vigenère
 ===============================
 
 * Évolution du code de César
 
 .. image:: carre-vigenere.png 
+   :width: 600px
 
 .. note::
 
@@ -137,6 +157,8 @@ Historique: Chiffre de Vigenère
 
 ----
 
+:data-scale: 1.2
+
 Historique: Cryptanalyse de Vigenère
 ====================================
 
@@ -145,6 +167,8 @@ Historique: Cryptanalyse de Vigenère
 * Analyse des fréquences
 
 ----
+
+:data-scale: 1.2
 
 Historique: Radiogramme de la victoire
 ======================================
@@ -157,10 +181,13 @@ Historique: Radiogramme de la victoire
 
 ----
 
+:data-scale: 1.2
+
 Historique: Enigma
 ==================
 
-.. image: 509px-Enigma_machine4.jpg
+.. image:: 509px-Enigma_machine4.jpg
+   :width: 400px
 
 .. note::
     
@@ -172,6 +199,8 @@ Historique: Enigma
 
 ----
 
+:data-scale: 1.2
+
 Historique: Enigma
 ==================
 
@@ -182,6 +211,8 @@ Historique: Enigma
 * Doublement de la clef
 
 ----
+
+:data-scale: 1.2
 
 Leçons de l'histoire
 ====================
@@ -195,6 +226,9 @@ Leçons de l'histoire
 
 ----
 
+:data-scale: 1.2
+:data-rotate: 90
+
 Chiffrement informatique
 ========================
 
@@ -203,6 +237,8 @@ Chiffrement informatique
     * Asymétrique: clefs différentes
 
 ----
+
+:data-scale: 1.2
 
 Exemple de chiffrement symétrique avec XOR
 ==========================================
@@ -222,6 +258,8 @@ Table de vérité XOR:
 +------+------+-----------------+
 
 ----
+
+:data-scale: 1.2
 
 Exemple de chiffrement symétrique avec XOR
 ==========================================
@@ -244,6 +282,8 @@ Exemple de chiffrement symétrique avec XOR
 
 ----
 
+:data-scale: 1.2
+
 Concepts de chiffrement asymétrique
 ===================================
 
@@ -253,6 +293,8 @@ Concepts de chiffrement asymétrique
 * Pas utilisé pour chiffrer en temps réel car trop lent
 
 ----
+
+:data-scale: 1.2
 
 Chiffrement asymétrique: GPG/PGP
 ================================
@@ -271,6 +313,8 @@ Chiffrement asymétrique: GPG/PGP
 
 ----
 
+:data-scale: 1.2
+
 Chiffrement asymétrique
 =======================
 
@@ -282,6 +326,9 @@ Exemples d'utilisation conjointement au chiffrement symétrique:
 
 ----
 
+:data-rotate: 120    
+:data-scale: 1.2
+
 Fonctions de hachage cryptographiques
 =====================================
 
@@ -292,6 +339,8 @@ Fonctions de hachage cryptographiques
 
 
 ----
+
+:data-scale: 1.2
 
 Fonctions de hachage cryptographiques
 =====================================
@@ -307,6 +356,8 @@ Fonctions de hachage cryptographiques
 
 ----
 
+:data-scale: 1.2
+
 Fonctions de hachage cryptographiques
 =====================================
 
@@ -317,6 +368,8 @@ Exercice:
     a020b4d442d2c2997711a050daf2d155  -
 
 ----
+
+:data-scale: 1.2
 
 Failles célèbres dans les systèmes de chiffrement
 =================================================
