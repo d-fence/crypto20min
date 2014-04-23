@@ -17,6 +17,7 @@ odt: ${ECRIT}.rst
 clean:
 	rm ${ECRIT}.pdf
 	rm -rf presentation-crypto20
+	rm atbash-table.html
 
 carre-vigenere.png: carre-vigenere.html
 	wkhtmltoimage --width 650 carre-vigenere.html carre-vigenere.png
@@ -33,7 +34,13 @@ carre-vigenere.png: carre-vigenere.html
 633px-Enigma-action.svg.png:
 	wget https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Enigma-action.svg/633px-Enigma-action.svg.png
 
-images: carre-vigenere.png 640px-Skytale.png 319px-FOSDEM_2008_Key_signing_party.jpg 509px-Enigma_machine4.jpg 633px-Enigma-action.svg.png
+atbash-table.html: atbash-table.rst
+	rst2html atbash-table.rst atbash-table.html
+
+atbash-table.png: atbash-table.html
+	wkhtmltoimage --width 640 atbash-table.html atbash-table.png
+
+images: carre-vigenere.png 640px-Skytale.png 319px-FOSDEM_2008_Key_signing_party.jpg 509px-Enigma_machine4.jpg 633px-Enigma-action.svg.png atbash-table.png
 
 livre-comedie-humaine.txt:
 	wget http://www.gutenberg.org/ebooks/41211.txt.utf-8 -O livre-comedie-humaine.txt

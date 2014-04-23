@@ -104,11 +104,7 @@ Historique: Chiffre Atbash
 * Utilisé par les hébreux
 * Alphabet inverse:
 
-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|A|B|C|D|E|F|G|H|I|J|K|L|M|
-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|Z|Y|X|W|V|U|T|S|R|Q|P|O|N|
-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+.. image:: atbash-table.png
 
 .. note::
     Pour déchiffrer on recode le message chiffré
