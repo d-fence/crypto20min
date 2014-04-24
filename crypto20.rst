@@ -68,9 +68,8 @@ Stéganographie:
     L'art de la dissimulation
 
 .. note::
-    Il est important de donner ici encore quelques définitions afin d'essayer de 
-    diminuer la confusion entre les termes utilisés. De plus certains termes
-    entendu proviennent directement de l'anglais, comme "encryption".
+    * diminuer la confusion entre les termes utilisés. 
+    * certains termes entendus proviennent directement de l'anglais, comme "encryption".
 
 ----
 
@@ -90,9 +89,9 @@ Le chiffre :
     c'est la méthode de chiffrement ou l'organisme qui s'occupe de chiffrer
 
 .. note::
-    Il est donc préfréable d'utiliser le verbe "chiffrer" plutôt que "crypter" ou
-    pire encore "encrypter". Par contre décrypter peut convenir lorsque l'on 
-    déchiffre un message sans en possèder la clef.
+    * préfréable d'utiliser le verbe "chiffrer" plutôt que "crypter" ou
+      pire encore "encrypter".
+    * Par contre décrypter peut convenir lorsque l'on déchiffre un message sans en possèder la clef.
 
 ----
 
@@ -363,7 +362,6 @@ Fonctions de hachage cryptographiques
     * Certifier qu'un message n'a pas été modifié.
     * Risque de collisions existe.
     * Faille = possible de provoquer une collision 
-
 
 ----
 
