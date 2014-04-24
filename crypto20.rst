@@ -393,6 +393,10 @@ Exercice:
     $ echo "Mon joli message" | md5sum
     a020b4d442d2c2997711a050daf2d155  -
 
+.. note::
+    * Changer un bit
+    * e = 101 et f = 102
+
 ----
 
 :data-rotate: 150
