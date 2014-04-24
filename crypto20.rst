@@ -179,6 +179,7 @@ Historique: Analyse de fréquences
 * Facilite le déchiffrement d'une simple substitution
 
 .. image:: analyse.png
+   :height: 400px
 
 ----
 
@@ -190,7 +191,7 @@ Historique: Chiffre de Vigenère
 * Évolution du code de César
 
 .. image:: carre-vigenere.svg 
-   :width: 600px
+   :height: 400px
 
 .. note::
 
