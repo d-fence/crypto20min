@@ -320,6 +320,44 @@ Concepts de chiffrement asymétrique
 
 ----
 
+:data-rotate-x: 180
+
+.. image:: asym-1.svg
+    :width: 700px
+
+----
+
+.. image:: asym-2.svg
+    :width: 700px
+
+----
+
+.. image:: asym-3.svg
+    :width: 700px
+
+----
+
+.. image:: asym-4.svg
+    :width: 700px
+
+----
+
+.. image:: asym-5.svg
+    :width: 700px
+
+----
+
+.. image:: asym-6.svg
+    :width: 700px
+
+----
+
+.. image:: asym-7.svg
+    :width: 700px
+
+----
+
+:data-rotate-x: 0
 :data-scale: 1.2
 
 Chiffrement asymétrique: GPG/PGP
@@ -456,6 +494,7 @@ Informatique quantique
 ----
 
 :data-rotate-x: 90
+:data-scale: 0.1
 
 Outils utilisés pour la présentation
 ====================================
@@ -468,5 +507,4 @@ hovercraft:
 
 Merci
 =====
-
 
