@@ -78,4 +78,7 @@ presentation: presentation.css
 presentation-light: presentation-light.css
 	hovercraft -c presentation-light.css crypto20.rst presentation-crypto20
 
+presentation-larger: presentation-larger.css
+	hovercraft -c presentation-larger.css crypto20.rst presentation-crypto20
+
 all: clean images analyse.png ${ECRIT}.pdf presentation view
