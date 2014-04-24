@@ -96,6 +96,27 @@ Le chiffre :
 
 ----
 
+:data-scale: 1.4
+
+Définitions
+===========
+
+AES:
+    Advanced Encryption Standard.
+
+Rijndael:
+    Algorithme de chiffrement symétrique choisis comme AES en 2000
+
+RSA :
+    Algorithme de chiffrement asymértique
+
+.. note::
+    * Rijndael: pour Rijmen et Daemen
+    * RSA : pour Rivest - Shamir - Adleman
+        * Utilisé avec GPG
+
+----
+
 :data-rotate: 60
 :data-scale: 1
 
@@ -427,7 +448,8 @@ Failles - Epic Fail
 Informatique quantique
 ======================
 
-
+.. image:: Psi2.svg
+   :width: 500px
 
 ----
 
