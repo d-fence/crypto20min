@@ -20,23 +20,37 @@ Sources:
 ----
 
 :data-rotate: 30
-:data-scale: 1.3
+:data-scale: 1.1
 
 Plan
 ====
 
-1. Définitions
-2. Historique
-3. Leçons de l'histoire
-4. Chiffrement informatique
-5. Chiffrement symétrique - XOR
-6. Concepts de chiffrement assymétrique
-7. Fonctions de hachage cryptographiques
-8. Failles célèbres dans les systèmes de chiffrement
+1. Introduction
+2. Définitions
+3. Historique
+4. Leçons de l'histoire
+5. Chiffrement informatique
+6. Chiffrement symétrique - XOR
+7. Concepts de chiffrement assymétrique
+8. Fonctions de hachage cryptographiques
+9. Failles célèbres dans les systèmes de chiffrement
 
 ----
 
 :data-scale: 1.2
+
+Introduction
+============
+
+* Chiffrement des communications
+* Authentification des utilisateurs
+* Monnaie électronique
+* Vote électronique
+* ...
+
+----
+
+:data-scale: 1
 
 Définitions
 ===========
@@ -60,7 +74,7 @@ Stéganographie:
 
 ----
 
-:data-scale: 1.4
+:data-scale: 1.2
 
 Définitions
 ===========
@@ -407,6 +421,13 @@ Failles - Epic Fail
 
 * CVE-2014-0092 - "Gnu TLS goto fail"
 * CVE-2014-0160 - "Heartbleed"
+
+----
+
+Informatique quantique
+======================
+
+
 
 ----
 
