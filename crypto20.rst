@@ -44,8 +44,10 @@ Introduction
 
 * Chiffrement des communications
 * Authentification des utilisateurs
+* Signature digitale
 * Monnaie électronique
 * Vote électronique
+* eGovernment
 * ...
 
 ----
